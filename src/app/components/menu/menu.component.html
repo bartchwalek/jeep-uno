@@ -1,9 +1,11 @@
 <div id="menu" #menuContainer [@toggle]="isOpen ? 'open' : 'closed'">
-  <a routerLink="home">Home</a>
-  <a routerLink="subjects">Subjects</a>
-  <a routerLink="live">Live View</a>
-  <a routerLink="blog">Blog</a>
-  <a href='https://www.youtube.com/channel/UCqR4Yzt6lgxAUpoK0SLMLPg' target="new_window">Youtube / Videos</a>
+  <div class="pastille"><a routerLink="home">Home</a></div>
+  <div class="pastille"><a routerLink="subjects">Subjects</a></div>
+  <div class="pastille"><a routerLink="gallery">Gallery</a></div>
+  <div class="pastille"><a routerLink="live">Live View</a></div>
+  <div class="pastille"><a routerLink="blog">Blog</a></div>
+  <div class="pastille"><a href='https://www.youtube.com/channel/UCqR4Yzt6lgxAUpoK0SLMLPg' target="new_window">Youtube /
+    Videos</a></div>
 
   <app-profile></app-profile>
 </div>

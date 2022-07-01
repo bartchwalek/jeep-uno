@@ -10,6 +10,7 @@ import { LiveViewComponent } from './pages/live-view/live-view.component';
 import { SubjectsComponent } from './pages/subjects/subjects.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { BlogComponent } from './pages/blog/blog.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BlogComponent } from './pages/blog/blog.component';
     LiveViewComponent,
     SubjectsComponent,
     ProfileComponent,
-    BlogComponent
+    BlogComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
