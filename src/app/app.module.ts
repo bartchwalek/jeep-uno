@@ -6,13 +6,15 @@ import {AppComponent} from './app.component';
 import {MainPageComponent} from './pages/main-page/main-page.component';
 import {MenuComponent} from './components/menu/menu.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { LiveViewComponent } from './pages/live-view/live-view.component';
-import { SubjectsComponent } from './pages/subjects/subjects.component';
-import { ProfileComponent } from './components/profile/profile.component';
-import { BlogComponent } from './pages/blog/blog.component';
-import { GalleryComponent } from './pages/gallery/gallery.component';
-import { ProjectComponent } from './pages/project/project.component';
-import { MePageComponent } from './pages/me-page/me-page.component';
+import {LiveViewComponent} from './pages/live-view/live-view.component';
+import {SubjectsComponent} from './pages/subjects/subjects.component';
+import {ProfileComponent} from './components/profile/profile.component';
+import {BlogComponent} from './pages/blog/blog.component';
+import {GalleryComponent} from './pages/gallery/gallery.component';
+import {ProjectComponent} from './pages/project/project.component';
+import {MePageComponent} from './pages/me-page/me-page.component';
+import {DistributorsComponent} from './pages/distributors/distributors.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { MePageComponent } from './pages/me-page/me-page.component';
     BlogComponent,
     GalleryComponent,
     ProjectComponent,
-    MePageComponent
+    MePageComponent,
+    DistributorsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

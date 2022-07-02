@@ -1,0 +1,23 @@
+<h2>Providers, distributors, thrift, antiques, scrap yards and stores</h2>
+
+<p>
+  Here is a list of locations online and offline where you can look for needed parts, materials and tools.
+</p>
+
+<h3>Online</h3>
+
+<div class="panel table" *ngFor="let provider of (providers.getProviders() | async)">
+  <div *ngIf="provider.type === 'online'">
+    <div class="title">{{ provider.title }}</div>
+    <div class="description">
+      {{ provider.description }} <br>
+      <div *ngFor="let link of provider.urls" class="sublink"><a href="{{ link.url }}"
+                                                                 target="provider"> {{ link.label }}</a></div>
+    </div>
+  </div>
+</div>
+
+
+<h3>Offline</h3>
+
+<div class="panel">Grainger</div>

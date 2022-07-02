@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Grainger",
+    "title": "Grainger (Canada / USA)",
+    "description": "Distributor to individuals and business of material for construction and mechanical assembly, safety, welding, etc.\n    Found all the needed grades and qualities of fasteners. Look for clearance sales and save a lot.\n    Affordable shipping and extremely fast. Create an account.",
+    "urls": [
+      {
+        "url": "https://www.grainger.ca",
+        "label": "Grainger.ca"
+      }
+    ],
+    "type": "online"
+  },
+  {
+    "name": "Fastenal",
+    "title": "Fastenal (Canada / USA)",
+    "description": "Distributor to individuals and business of material for construction and mechanical assembly, safety, welding, etc. Need an account. All types of fasteners and metal supplies: sheet, rod, tubing...",
+    "urls": [
+      {
+        "url": "https://www.fastenal.ca",
+        "label": "Fastenal.ca"
+      }
+    ],
+    "type": "online"
+  },
+  {
+    "name": "Tenaquip",
+    "title": "Tenaquip (Canada)",
+    "description": "Distributor to individuals and business of material for construction and mechanical assembly, safety, welding, etc.",
+    "urls": [
+      {
+        "url": "https://www.tenaquip.com",
+        "label": "Tenaquip.com"
+      }
+    ],
+    "type": "online"
+  }
+]
