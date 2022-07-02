@@ -46,6 +46,8 @@ export class MenuComponent implements OnInit, AfterViewInit {
   private mW: number = 0;
   private boundP: number = 10;
   public isOpen: boolean = false;
+  public stick: boolean = false;
+  public preventClose: boolean = false;
 
   ngOnInit(): void {
 
@@ -57,19 +59,24 @@ export class MenuComponent implements OnInit, AfterViewInit {
 
   public updateDimensions() {
     this.wW = window.innerWidth;
-    this.mW = this.menuContainer.nativeElement.getBoundingClientRect().width;
+    this.mW = this.menuContainer.nativeElement.getBoundingClientRect().width + 20;
   }
 
-  public openMenu() {
+  public openMenu(stick: boolean = false) {
     if (!this.isOpen) {
       this.isOpen = true;
+      this.preventClose = true;
     }
   }
 
-  public closeMenu() {
-    if (this.isOpen) {
+  public closeMenu(stick: boolean = false) {
+    if (this.isOpen && !this.preventClose) {
       this.isOpen = false;
     }
+  }
+
+  public toggleMenu(stick: boolean = false) {
+    this.isOpen ? this.closeMenu() : this.openMenu();
   }
 
   public testMousePosition(xpos: number) {
@@ -78,7 +85,9 @@ export class MenuComponent implements OnInit, AfterViewInit {
     }
 
     if (xpos < (this.wW - this.mW)) {
-      this.closeMenu();
+      if (!this.stick) {
+        this.closeMenu();
+      }
     }
   }
 
@@ -88,6 +97,34 @@ export class MenuComponent implements OnInit, AfterViewInit {
 
   @HostListener('window:resize', ['$event']) windowResizeEvent(event: MouseEvent) {
     this.updateDimensions();
+  }
+
+  @HostListener('document:contextmenu', ['$event']) documentContextMenu(event: MouseEvent) {
+    return false;
+  }
+
+  @HostListener('mouseenter', ['$event']) mouseEnter(event: MouseEvent) {
+    this.preventClose = false;
+  }
+  @HostListener('mouseleave', ['$event']) mouseLeave(event: MouseEvent) {
+    this.preventClose = false;
+  }
+
+  @HostListener('document:mousedown', ['$event']) documentClick(event: MouseEvent | Event) {
+    event = event || window.event;
+    let rB: boolean = false;
+    if ('which' in event) {
+      rB = (event as MouseEvent).which === 3;
+    } else if ('button' in event) {
+      rB = (event as MouseEvent).button === 2;
+    }
+    if (rB) {
+      event.preventDefault();
+      event.stopPropagation();
+      event.cancelBubble = true;
+      this.toggleMenu();
+      return false;
+    }
   }
 
 }

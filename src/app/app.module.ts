@@ -11,6 +11,8 @@ import { SubjectsComponent } from './pages/subjects/subjects.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
+import { ProjectComponent } from './pages/project/project.component';
+import { MePageComponent } from './pages/me-page/me-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
     SubjectsComponent,
     ProfileComponent,
     BlogComponent,
-    GalleryComponent
+    GalleryComponent,
+    ProjectComponent,
+    MePageComponent
   ],
   imports: [
     BrowserModule,
