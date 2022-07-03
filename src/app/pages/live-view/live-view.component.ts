@@ -9,7 +9,7 @@ export class LiveViewComponent implements OnInit, AfterViewInit {
 
   @ViewChild('live') live: ElementRef;
 
-  imgsrc: string = 'https://www.jeep.uno/live.jpg';
+  imgsrc: string = 'https://www.jeep.uno/assets/live.jpg';
 
   constructor() {
   }
