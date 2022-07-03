@@ -15,6 +15,7 @@ import {ProjectComponent} from './pages/project/project.component';
 import {MePageComponent} from './pages/me-page/me-page.component';
 import {DistributorsComponent} from './pages/distributors/distributors.component';
 import {HttpClientModule} from '@angular/common/http';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -28,13 +29,14 @@ import {HttpClientModule} from '@angular/common/http';
     GalleryComponent,
     ProjectComponent,
     MePageComponent,
-    DistributorsComponent
+    DistributorsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

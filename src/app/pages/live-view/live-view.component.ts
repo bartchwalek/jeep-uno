@@ -9,6 +9,8 @@ export class LiveViewComponent implements OnInit, AfterViewInit {
 
   @ViewChild('live') live: ElementRef;
 
+  imgsrc: string = 'https://www.jeep.uno/live.jpg';
+
   constructor() {
   }
 
@@ -22,9 +24,9 @@ export class LiveViewComponent implements OnInit, AfterViewInit {
   public updateLiveView(): void {
     const img: HTMLImageElement = this.live.nativeElement;
 
-    img.src = 'live.jpg?' + Math.random();
+    img.src = `${this.imgsrc}?${Math.random()}`;
     setInterval(() => {
-      img.src = 'live.jpg?' + Math.random();
+      img.src = `${this.imgsrc}?${Math.random()}`;
     }, 10000);
   }
 }

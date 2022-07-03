@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
-import {animate, state, style, transition, trigger} from "@angular/animations";
+import {animate, state, style, transition, trigger} from '@angular/animations';
+import { faVideo, faHome, faCogs, faUser, faCommentDots, faChalkboardTeacher, faIdCard, faImages, faVideoCamera } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-menu',
@@ -27,6 +28,15 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
 export class MenuComponent implements OnInit, AfterViewInit {
 
   private mC: ElementRef;
+  public faYoutube = faVideo;
+  public faHome = faHome;
+  public faCogs = faCogs;
+  public faUser = faUser;
+  public faCommentDots = faCommentDots;
+  public faChalkboardTeacher = faChalkboardTeacher;
+  public faIdCard = faIdCard;
+  public faImages = faImages;
+  public faVideoCamera = faVideoCamera;
 
   @ViewChild('menuContainer') set menuContainer(mc: ElementRef) {
     if (mc) {

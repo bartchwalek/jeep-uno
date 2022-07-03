@@ -1,14 +1,13 @@
 <div id="menu" #menuContainer [@toggle]="isOpen ? 'open' : 'closed'">
-  <div class="pastille"><a routerLink="home">Home</a></div>
-  <div class="pastille"><a routerLink="me">Me</a></div>
-  <div class="pastille"><a routerLink="subjects">Project Definition</a></div>
-  <div class="pastille"><a routerLink="project">Project</a></div>
-  <div class="pastille"><a routerLink="gallery">Gallery</a></div>
-  <div class="pastille"><a routerLink="liveview">Live View</a></div>
-  <div class="pastille"><a routerLink="blog">Blog</a></div>
-  <div class="pastille"><a routerLink="distributors">Nuts and bolts</a></div>
-  <div class="pastille"><a href='https://www.youtube.com/channel/UCqR4Yzt6lgxAUpoK0SLMLPg' target="new_window">Youtube /
-    Videos</a></div>
+  <div class="pastille"><a routerLink="home"><fa-icon [icon]="faHome"></fa-icon> Home</a></div>
+  <div class="pastille"><a routerLink="me"><fa-icon [icon]="faIdCard"></fa-icon> Me</a></div>
+  <div class="pastille"><a routerLink="subjects"><fa-icon [icon]="faChalkboardTeacher"></fa-icon> Project Definition</a></div>
+  <div class="pastille"><a routerLink="project"><fa-icon [icon]="faChalkboardTeacher"></fa-icon> Project</a></div>
+  <div class="pastille"><a routerLink="gallery"><fa-icon [icon]="faImages"></fa-icon> Gallery</a></div>
+  <div class="pastille"><a routerLink="liveview"><fa-icon [icon]="faVideoCamera"></fa-icon> Live View</a></div>
+  <div class="pastille"><a routerLink="blog"><fa-icon [icon]="faCommentDots"></fa-icon> Blog</a></div>
+  <div class="pastille"><a routerLink="distributors"><fa-icon [icon]="faCogs"></fa-icon> Nuts and bolts</a></div>
+  <div class="pastille"><a href='https://www.youtube.com/channel/UCqR4Yzt6lgxAUpoK0SLMLPg' target="new_window"><fa-icon [icon]="faYoutube"></fa-icon> Youtube Videos</a></div>
 
   <app-profile></app-profile>
 </div>
